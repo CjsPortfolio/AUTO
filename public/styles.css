@@ -54,6 +54,7 @@ body {
      width: 100%;
 }
  .footer p {
+     color: white;
      margin: 0;
      display: inline-block;
      margin-right: 30px;
