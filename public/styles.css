@@ -12,10 +12,10 @@ body {
      margin-bottom: 20px;
 }
  h1 {
-     color: #343a40;
+     color: white;
 }
  label {
-     color: #495057;
+     color: white;
 }
  .centered-textarea {
      display: block;
@@ -99,7 +99,7 @@ body {
 }
 
 .disable {
-  display: none;
+  background-color: green;
 }
 
 #inputOfPrefix, #inputOfAdmin {
