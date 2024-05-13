@@ -17,6 +17,10 @@ body {
  label {
      color: black;
 }
+
+p {
+     color: white;
+}
  .centered-textarea {
      display: block;
      margin: 0 auto;
