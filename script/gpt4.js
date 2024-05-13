@@ -9,7 +9,7 @@ module.exports.config = {
     cooldown: 5,
     hasPrefix: true,
     role: 0,
-  }; module.exports.run async function({ fonts, api, message, args }) {
+  }; module.exports.run function({ fonts, api, message, args }) {
     const query = args.join(" ");
 
     if (!query) {
