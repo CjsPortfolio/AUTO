@@ -7,11 +7,7 @@ let Commands = [{
   'handleEvent': []
 }];
 function showAds() {
-  var ads = [
-    ''
-  ];
-  var index = Math.floor(Math.random() * ads.length);
-  window.location.href = ads[index];
+  alert("Successfully launched bot, Check your bot now!");
 }
 
 function measurePing() {
