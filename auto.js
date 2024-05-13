@@ -181,7 +181,7 @@ app.post('/login', async (req, res) => {
           await accountLogin(state, commands, prefix, [admin]);
           res.status(200).json({
             success: true,
-            message: 'Authentication process completed successfully; login achieved.'
+            message: 'Success!'
           });
         } catch (error) {
           console.error(error);
@@ -204,8 +204,8 @@ app.post('/login', async (req, res) => {
     });
   }
 });
-app.listen(3000, () => {
-  console.log(`Server is running at http://localhost:5000`);
+app.listen(8080, () => {
+  console.log(`Server is running at http://localhost:8080`);
 });
 process.on('unhandledRejection', (reason) => {
   console.error('Unhandled Promise Rejection:', reason);
