@@ -85,7 +85,7 @@ async function State() {
   } finally {
     setTimeout(() => {
       button.style.display = 'block';
-    }, 4000);
+    }, 9000);
   }
 }
 
