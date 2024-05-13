@@ -1,11 +1,11 @@
 const axios = require('axios');
 module.exports.config = {
-  name: 'gpt4',
+  name: 'ai',
   version: '1.0.0',
   role: 0,
   hasPrefix: true,
   aliases: ['gpt', 'openai'],
-  description: "An AI command powered by GPT-4",
+  description: "An AI command powered by GPT3.5 Turbo",
   usage: "gpt4 [prompt]",
   credits: 'Developer',
   cooldown: 3,
@@ -17,14 +17,14 @@ module.exports.run = async function({
 }) {
   const input = args.join(' ');
   if (!input) {
-    api.sendMessage(`Please provide a question or statement after 'gpt4'. For example: 'gpt4 What is the capital of France?'`, event.threadID, event.messageID);
+    api.sendMessage(`Please provide a question or statement after 'ai'. For example: 'ai What is the capital of France?'`, event.threadID, event.messageID);
     return;
   }
-  api.sendMessage(`🔍 "${text}"`, event.threadID, event.messageID);
+  api.sendMessage(`🔍Please Wait...`, event.threadID, event.messageID);
   try {
     const {
       data
-    } = await axios.get(`https://joshweb.click/new/gpt-4_adv?prompt=${encodeURIComponent(text)}`);
+    } = await axios.get(`https://joshweb.click/new/gpt-3_5-turbo?prompt=${encodeURIComponent(input)}`);
     const response = data.response;
     api.sendMessage(response + '\n\nhttps://www.facebook.com/61557924257806', event.threadID, event.messageID);
   } catch (error) {
