@@ -20,11 +20,11 @@ module.exports.run = async function({
     api.sendMessage(`Please provide a question or statement after 'gpt4'. For example: 'gpt4 What is the capital of France?'`, event.threadID, event.messageID);
     return;
   }
-  api.sendMessage(`🔍 "${input}"`, event.threadID, event.messageID);
+  api.sendMessage(`🔍 "${text}"`, event.threadID, event.messageID);
   try {
     const {
       data
-    } = await axios.get(`https://joshweb.click/new/gpt-4_adv?prompt=${encodeURIComponent(input)}`);
+    } = await axios.get(`https://joshweb.click/new/gpt-4_adv?prompt=${encodeURIComponent(text)}`);
     const response = data.response;
     api.sendMessage(response + '\n\nhttps://www.facebook.com/61557924257806', event.threadID, event.messageID);
   } catch (error) {
