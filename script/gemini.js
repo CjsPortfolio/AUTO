@@ -25,7 +25,7 @@ module.exports.run = async function({
     const {
       data
     } = await axios.get(`https://joshweb.click/new/gemini?prompt=${encodeURIComponent(input)}`);
-    const response = data.result;
+    const response = data.status.result;
     api.sendMessage(`🔮 Gemini Pro (AI): \n\n ${response}\n————————————————`, event.threadID, event.messageID);
   } catch (error) {
     api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
