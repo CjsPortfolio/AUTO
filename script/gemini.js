@@ -24,7 +24,7 @@ module.exports.run = async function({
   try {
     const {
       data
-    } = await axios.get(`https://joshweb.click/new/gpt-4_adv?prompt=${encodeURIComponent(input)}`);
+    } = await axios.get(`https://joshweb.click/new/gemini?prompt=${encodeURIComponent(input)}`);
     const response = data.result.reply;
     api.sendMessage(`🔮 Gemini Pro (AI): \n\n ${response}\n————————————————`, event.threadID, event.messageID);
   } catch (error) {
