@@ -6,7 +6,7 @@ module.exports.config = {
   hasPrefix: true,
   aliases: ['gpt', 'openai'],
   description: "An AI command powered by GPT-4",
-  usage: "Ai [promot]",
+  usage: "Ai [prompt]",
   credits: 'Developer',
   cooldown: 3,
 };
@@ -25,7 +25,7 @@ module.exports.run = async function({
     const {
       data
     } = await axios.get(`https://joshweb.click/new/gpt-4_adv?prompt=${encodeURIComponent(input)}`);
-    const response = data.reply;
+    const response = data.result.reply;
     api.sendMessage(response + '\n\nhttps://bit.ly/create-chatbot-me', event.threadID, event.messageID);
   } catch (error) {
     api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
