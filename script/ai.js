@@ -26,7 +26,7 @@ module.exports.run = async function({
       data
     } = await axios.get(`https://joshweb.click/new/gpt-4_adv?prompt=${encodeURIComponent(input)}`);
     const response = data.result.reply;
-    api.sendMessage(response + '\n\nhttps://bit.ly/create-chatbot-me', event.threadID, event.messageID);
+    api.sendMessage(`GPT 4 (AI): \n\n ${response}\n————————————————`, event.threadID, event.messageID);
   } catch (error) {
     api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
   }
