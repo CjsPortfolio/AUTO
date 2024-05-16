@@ -15,6 +15,9 @@ module.exports.run = async function({ api, event, args }) {
     const fs = require("fs-extra");
     const request = require("request");
     const keySearch = args.join(" ");
+
+    api.sendMessage(`🔍 Please wait while im searching...`, event.threadID, event.messageID);
+    
     if(keySearch.includes("-") == false) return api.sendMessage('Please enter in the format, example: pinterest Coco Martin - 10 (20 limit only)', event.threadID, event.messageID)
     const keySearchs = keySearch.substr(0, keySearch.indexOf('-'))
     const numberSearch = keySearch.split("-").pop() || 6
@@ -28,7 +31,7 @@ module.exports.run = async function({ api, event, args }) {
       fs.writeFileSync(path, Buffer.from(getDown, 'utf-8'));
       imgData.push(fs.createReadStream(__dirname + `/cache/${num}.jpg`));
     }
-    api.sendMessage(`🔍 Please wait while im searching...`, event.threadID, event.messageID);
+    
     api.sendMessage({
         attachment: imgData,
         body: numberSearch + " " + 'Search results for keyword: '+ keySearchs
