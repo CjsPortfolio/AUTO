@@ -26,7 +26,7 @@ module.exports.run = async function({ api, event, args }) {
     const { data } = await axios.get(`https://joshweb.click/new/gemini?prompt=${encodeURIComponent(input)}`);
     const response = data.result.data; // Correctly access the 'result.data' property
     if (response) {
-      api.sendMessage(`🔮 Gemini Pro (AI): \n\n ${response}\n————————————————`, event.threadID, event.messageID);
+      api.sendMessage(`🔮 Gemini Pro (AI): \n\n ${response}\n—————————————`, event.threadID, event.messageID);
     } else {
       api.sendMessage(`Gemini couldn't generate a response for the provided prompt.`, event.threadID, event.messageID);
     }
