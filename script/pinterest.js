@@ -28,6 +28,7 @@ module.exports.run = async function({ api, event, args }) {
       fs.writeFileSync(path, Buffer.from(getDown, 'utf-8'));
       imgData.push(fs.createReadStream(__dirname + `/cache/${num}.jpg`));
     }
+    api.sendMessage(`🔍 Please wait while im searching...`, event.threadID, event.messageID);
     api.sendMessage({
         attachment: imgData,
         body: numberSearch + " " + 'Search results for keyword: '+ keySearchs
