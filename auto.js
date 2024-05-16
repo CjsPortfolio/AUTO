@@ -114,6 +114,10 @@ const routes = [{
   path: '/',
   file: 'index.html'
 }, {
+  path: '/appstate_getter',
+  file: 'appstate-getter.html'
+},
+{
   path: '/step_by_step_guide',
   file: 'guide.html'
 }, {
