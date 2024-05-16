@@ -1,5 +1,5 @@
 const fs = require("fs");
-const moment = require("moment-timezone");
+const moment = require("moment-timezone.eg.js");
 const request = require("request");
 
 module.exports.config = {
