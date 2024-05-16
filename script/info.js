@@ -26,8 +26,7 @@ module.exports.run = async function({ api, event, args, prefix, admin }) {
     const CREATORLINK = "https://www.facebook.com/carljohn.villavito";
     const BOTCREATOR = `${admin}`;
     const FILESOWNER = "AJ";
-
-    const callback = () => {
+    
         api.sendMessage({
             body: `➢ Admin and Bot Information
 ✧ Bot Admin: ${admin}
@@ -40,7 +39,4 @@ module.exports.run = async function({ api, event, args, prefix, admin }) {
 ➳ Bot is running ${hours}:${minutes}:${seconds}.
 ✫ Thanks for using my bot`
         });
-    };
-
-    callback();
 };
