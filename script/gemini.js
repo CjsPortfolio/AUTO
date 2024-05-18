@@ -11,7 +11,7 @@ module.exports.config = {
   credits: "Hazeyy",
   description: "( 𝙶𝚎𝚖𝚒𝚗𝚒 𝙿𝚛𝚘 𝚅𝚒𝚜𝚒𝚘𝚗: Used this ai if your want to reply with a photo. )",
   usage: "( 𝙼𝚘𝚍𝚎𝚕 - 𝙶𝚎𝚖𝚒𝚗𝚒 𝙿𝚛𝚘 𝚅𝚒𝚜𝚒𝚘𝚗 )",
-  cooldown: 3,
+  cooldown: 15,
 };
 
 async function convertImageToCaption(imageURL, api, event, inputText) {
