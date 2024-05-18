@@ -8,7 +8,7 @@ module.exports.config = {
     aliases: ["pinte"],
     commandCategory: "Search",
     usages: "[Text]",
-    cooldowns: 5,
+    cooldowns: 15,
 };
 module.exports.run = async function({ api, event, args }) {
     const axios = require("axios");
