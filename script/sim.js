@@ -5,7 +5,7 @@ module.exports.config = {
 		aliases: ["Sim"],
 		credits: "jerome",
 		description: "Talk to sim",
-		cooldown: 15,
+		cooldown: 8,
 		hasPrefix: false
 };
 
