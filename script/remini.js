@@ -9,7 +9,7 @@ module.exports.config = {
   description: "( 𝚁𝚎𝚖𝚒𝚗𝚒 )",
   commandCategory: "𝚗𝚘 𝚙𝚛𝚎𝚏𝚒𝚡",
   usages: "( 𝙴𝚗𝚌𝚑𝚊𝚗𝚌𝚎 𝙸𝚖𝚊𝚐𝚎𝚜 )",
-  cooldowns: 2,
+  cooldowns: 11,
 };
 
 module.exports.handleEvent = async function ({ api, event }) {
