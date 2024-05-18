@@ -8,7 +8,7 @@ module.exports.config = {
   description: "An AI command powered by GPT-4",
   usage: "Ai [prompt]",
   credits: 'Developer',
-  cooldown: 15,
+  cooldown: 8,
 };
 module.exports.run = async function({
   api,
