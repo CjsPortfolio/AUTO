@@ -19,9 +19,9 @@ module.exports.run = async ({ api, event, args }) => {
   if (!song) {
     return api.sendMessage('Please enter a song.', event.threadID, event.messageID);
   } else {
-    axios.get(`https://lyrist-tumk.onrender.com/api/${encodeURIComponent(song)}`)
+    axios.get(`http://94.130.129.40:8370/search/lyrics?q=${encodeURIComponent(song)}`)
       .then(res => {
-        const { lyrics, title, artist } = res.data;
+        const { lyrics, title, artist } = res.result;
 
         const message = `Title: ${title}\n\nArtist: ${artist}\n\nLyrics: ${lyrics}`;
         api.sendMessage(message, event.threadID, event.messageID);
