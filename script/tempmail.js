@@ -67,7 +67,7 @@ module.exports.run = async function({ api, event, args }) {
       console.error(error);
       api.sendMessage('An error occurred while retrieving your email information.', event.threadID, event.messageID);
     }
-  } else if (command === 'generate') {
+  } else if (command === 'generate' || command === "gen") {
     // Generate a new temporary email
     try {
       const response = await axios.get('https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=1');
