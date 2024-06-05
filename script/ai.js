@@ -22,9 +22,10 @@ module.exports.run = async function({
   }
   api.sendMessage(`🔍 •••`, event.threadID, event.messageID);
   try {
+    const sender = event.senderID;
     const {
       data
-    } = await axios.get(`http://94.130.129.40:8370/gpt4?prompt=${encodeURIComponent(input)}&uid=100013036275290`);
+    } = await axios.get(`https://deku-rest-api-3ijr.onrender.com/gpt4?prompt=${encodeURIComponent(input)}&uid=${sender}`);
     const response = data.gpt4;
     api.sendMessage(`GPT 4 (AI): \n\n ${response}\n——————————————`, event.threadID, event.messageID);
   } catch (error) {
