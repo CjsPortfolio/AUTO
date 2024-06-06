@@ -1,10 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-// Load configuration
-const configPath = path.resolve(__dirname, '../config.json');
-const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-
 module.exports.config = {
   name: "welcome",
   version: "1.0.0"
@@ -28,7 +21,7 @@ module.exports.handleEvent = async ({ api, event }) => {
             // Change the bot's nickname to the default
             const botInfo = await api.getUserInfo(api.getCurrentUserID());
             const firstName = botInfo[api.getCurrentUserID()].firstName;
-            const defaultNickname = `${config.PREFIX} - ${firstName}-chan`;
+            const defaultNickname = `BlackCornerBot - ${firstName}-chan`;
             await api.changeNickname(defaultNickname, event.threadID, api.getCurrentUserID());
           });
         } else {
